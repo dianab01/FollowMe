@@ -78,12 +78,15 @@ The obtained model is firstly saved, and then further used to analyze its behavi
 In the tests below, the first image represents the input image as taken by the quadrotor, the second image represents the ground truth, the mask where the hero is labeled, whereas the third image is the actual output of the network.
 
 ![image5]
+
 **Images while following the target**
 
 ![image6]
+
 **Images without the target**
 
 ![image7]
+
 **Images with the target in the distance**
 
 As it can be observed, the trained network has deficiencies especially when the hero is situated at a certain distance. Segmentation in such situation can be further improved by training the network with more data where the hero is far away, data gathered from the simulator.
