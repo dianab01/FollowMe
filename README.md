@@ -70,13 +70,16 @@ The obtained model is firstly saved, and then further used to analyze its behavi
 In the tests below, the first image represents the input image as taken by the quadrotor, the second image represents the ground truth, the mask where the hero is labeled, whereas the third image is the actual output of the network.
 
 ![image5]
-*Images while following the target*
+
+**Images while following the target**
 
 ![image6]
-*Images without the target*
+
+**Images without the target**
 
 ![image7]
-*Images with the target in the distance*
+
+**Images with the target in the distance**
 
 As it can be observed, the trained network has deficiencies especially when the hero is situated at a certain distance. Segmentation in such situation can be further improved by training the network with more data where the hero is far away, data gathered from the simulator.
 
@@ -99,7 +102,7 @@ Following Target           |  Input vs Output
 
 ### Final Score
 
-The final scoring of the FCN is obtained by multiplying the final *Intersection over Union* with the **weight**, described as `weight = true_pos/(true_pos+false_neg+false_pos)`.
+The final scoring of the FCN is obtained by multiplying the final **Intersection over Union** with the **weight**, described as `weight = true_pos/(true_pos+false_neg+false_pos)`.
 
 ```
 final_score = final_IoU * weight
