@@ -133,7 +133,7 @@ The plot of the loss function over the epochs at three distinct time periods can
 :-------------------------:|:-------------------------:|:-------------------------:
 Epoch 4                    |  Epoch 14		           |  Epoch 24
 
-Train data can be found [here] (https://s3-us-west-1.amazonaws.com/udacity-robotics/Deep+Learning+Data/Lab/train.zip), validation data [here] (https://s3-us-west-1.amazonaws.com/udacity-robotics/Deep+Learning+Data/Lab/validation.zip) and evaluation data [here] (https://s3-us-west-1.amazonaws.com/udacity-robotics/Deep+Learning+Data/Project/sample_evaluation_data.zip) and need to be placed in the `/data/train`, `/data/validation` and `/data/sample_evaluation_data` respectively.
+Train data can be found [here](https://s3-us-west-1.amazonaws.com/udacity-robotics/Deep+Learning+Data/Lab/train.zip), validation data [here](https://s3-us-west-1.amazonaws.com/udacity-robotics/Deep+Learning+Data/Lab/validation.zip) and evaluation data [here](https://s3-us-west-1.amazonaws.com/udacity-robotics/Deep+Learning+Data/Project/sample_evaluation_data.zip) and need to be placed in the `/data/train`, `/data/validation` and `/data/sample_evaluation_data` respectively.
 
 **Resulting weights and configuration file can be found in `/data/weights`.**
 
