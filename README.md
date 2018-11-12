@@ -43,13 +43,21 @@ In the implemented architecture, 3 encoder and 3 decoder layers have been chosen
 
 #### 2. Choosing the learning hyper-parameters 
 
-The following hyper-parameters have been chosen for the training phase of the network:
+There are a number of parameters which can be modified and tuned for obtaining a better accuracy of the network, as it follows:
+* `batch_size`: number of images that go through the network at once
+* `num_epochs`: the number of times the dataset is passed through the network
+* `steps_per_epoch`: number of batches that pass in 1 epoch
+* `validation_steps`: number of batches that pass through the network in 1 epoch in the validation step
+* `workers`: maximum number of used processes
+
+The following hyper-parameters have been chosen for the training phase of the network, mostly by observing the results of previous trainig:
 ```
 learning_rate = 0.001
 batch_size = 100
 num_epochs = 25
 steps_per_epoch = 200
 validation_steps = 50
+workers = 2
 ```
 
 Normalizing inputs to every layer of the network allowed choosing a smaller learning rate.
@@ -70,13 +78,16 @@ The obtained model is firstly saved, and then further used to analyze its behavi
 In the tests below, the first image represents the input image as taken by the quadrotor, the second image represents the ground truth, the mask where the hero is labeled, whereas the third image is the actual output of the network.
 
 ![image5]
-*Images while following the target*
+
+**Images while following the target**
 
 ![image6]
-*Images without the target*
+
+**Images without the target**
 
 ![image7]
-*Images with the target in the distance*
+
+**Images with the target in the distance**
 
 As it can be observed, the trained network has deficiencies especially when the hero is situated at a certain distance. Segmentation in such situation can be further improved by training the network with more data where the hero is far away, data gathered from the simulator.
 
@@ -99,7 +110,7 @@ Following Target           |  Input vs Output
 
 ### Final Score
 
-The final scoring of the FCN is obtained by multiplying the final *Intersection over Union* with the **weight**, described as `weight = true_pos/(true_pos+false_neg+false_pos)`.
+The final scoring of the FCN is obtained by multiplying the final **Intersection over Union** with the **weight**, described as `weight = true_pos/(true_pos+false_neg+false_pos)`.
 
 ```
 final_score = final_IoU * weight
